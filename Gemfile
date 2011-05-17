@@ -43,3 +43,4 @@ gem "compass-960-plugin"
 gem "capybara", "0.4.0", :group => :test
 gem "cucumber-rails", :group => :test
 gem "launchy", :group => :test
+gem "database_cleaner", :group => :test

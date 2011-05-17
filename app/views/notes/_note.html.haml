@@ -1,0 +1,8 @@
+%div
+  %li{:id => note.id, :class => "note #{note.color}"}
+    %p=note.text
+
+    %span.left
+      =link_to 'Edit', edit_note_path(note)
+    %span.right
+      = link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete

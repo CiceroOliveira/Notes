@@ -1,0 +1,51 @@
+@import "base";
+
+.note {
+	position: relative;
+	float: left;
+	width: 180px;
+	height: 180px;
+	list-style: none;
+	color: #333;
+	margin: 15px;
+	padding: 10px;
+	text-align: center;
+	@include box-shadow(2px 2px 5px #666);
+	
+	p {
+		font-family: "Helvetica Neue", Arial, sans-serif;
+		font-size: 200%;
+		line-height: 1.0;
+		padding: 10px;
+		margin: 0;
+		height: 140px;
+		overflow: hidden;
+	}
+}
+
+.yellow {
+	background-color: $alp-yellow;
+}
+
+.green {
+	background-color: $alp-green;
+}
+
+.pink {
+	background-color: $alp-pink;
+}
+
+.note span {
+	display: block;
+	bottom: 5px;
+	color: #666;
+	//font-size: 125%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
