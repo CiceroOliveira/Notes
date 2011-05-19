@@ -4,9 +4,18 @@
     = csrf_meta_tag
     /[if lt IE 9]
       = javascript_include_tag 'html5'
+    = javascript_include_tag :defaults, 'jquery-ui-1.8.13.custom.min'
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/text.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
-  %body
-    = yield
-    = javascript_include_tag :defaults
+    /[if lt IE 7]
+      = stylesheet_link_tag 'compiled/ie6.css', :media => 'screen, projection'
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Reenie+Beanie:regular"
+    %title Sticky Stacks
+  %body.container_12
+    %header.grid_12
+      %h1
+        =link_to "Sticky Stacks", root_url
+    %section.content.grid_12
+      = yield
+      = javascript_include_tag :defaults

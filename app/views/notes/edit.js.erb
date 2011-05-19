@@ -1,0 +1,13 @@
+$("#note-form").dialog({
+  autoOpen: true,
+  height: 600,
+  width: 600,
+  modal: true,
+  title: 'Edit Sticky',
+  buttons: {
+    "Edit": function() { $("#edit_note<%= @note.id %>").submit() },
+  },
+  open: function() {
+    $("#note-form").html("<%= escape_javascript(render('form')) %>")
+  },
+});

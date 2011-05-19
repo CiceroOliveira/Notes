@@ -76,6 +76,8 @@ GEM
     factory_girl_rails (1.1.beta1)
       factory_girl (~> 2.0.0.beta)
       rails (>= 3.0.0)
+    fancy-buttons (1.1.1)
+      compass (>= 0.11)
     ffi (1.0.7)
       rake (>= 0.8.7)
     fssm (0.2.7)
@@ -180,6 +182,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails (= 1.1.beta1)
+  fancy-buttons
   haml
   haml-rails
   jquery-rails

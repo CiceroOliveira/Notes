@@ -1,5 +1,5 @@
-%h1 My Notes
-
-= link_to 'New Note', new_note_path
-
-=render @notes
+.new_note.grid_12
+  = link_to 'New Sticky', new_note_path, :class => "new_note_button"
+%ul.notes
+  =render @notes
+%div#note-form{title: "Note", style: "display:none"}
