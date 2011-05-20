@@ -8,3 +8,7 @@ Next steps
 - Ajaxify it
 - Create subdomains by user
 - Create categories and allow rearranging
+
+Demo
+====
+[Sticky Stack](http://sticky-stack.heroku.com/)
