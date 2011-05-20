@@ -9,9 +9,9 @@ project_type = :rails
 project_path = Compass::AppIntegration::Rails.root
 environment  = Compass::AppIntegration::Rails.env
 
-http_path = "http://sticky-stack.heroku.com/"
+http_path = "/"
 css_dir   = 'tmp/stylesheets'
-sass_dir  = 'app/views/stylesheets'
+sass_dir  = 'app/stylesheets'
 # Heroku deployment --> end
 
 # Set this to the root of your project when deployed:
