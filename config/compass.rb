@@ -15,7 +15,7 @@ sass_dir  = 'app/views/stylesheets'
 # Heroku deployment --> end
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = "http://sticky-stack.heroku.com/"
 css_dir = "public/stylesheets/compiled"
 sass_dir = "app/stylesheets"
 
