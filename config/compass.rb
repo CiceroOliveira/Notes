@@ -5,6 +5,15 @@ require 'fancy-buttons'
 
 project_type = :rails
 
+# Heroku deployment --> start
+project_path = Compass::AppIntegration::Rails.root
+environment  = Compass::AppIntegration::Rails.env
+
+http_path = '/'
+css_dir   = 'tmp/stylesheets'
+sass_dir  = 'app/views/stylesheets'
+# Heroku deployment --> end
+
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "public/stylesheets/compiled"
