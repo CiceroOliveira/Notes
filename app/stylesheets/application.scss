@@ -22,12 +22,49 @@ header {
 	}
 }
 
-.new_note_button, #note_submit {
+*.new_note_button, #note_submit {
 	@include fancy-button($color-red);
 }
 
-.new_note_button {
+*.new_note_button {
 	margin-top: 1em;
+}
+
+section .new_note, .ui-dialog {
+	
+	fieldset {
+		margin: 0 0 10px 0;
+		
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	label{
+		display: block;
+		font-weight: bold;
+		line-height: 1.4;
+		color: $color-red;
+		text-shadow: 0 1px 1px #fff;
+	}
+	
+	textarea {
+		padding: 5px 8px;
+		font-size: 1.2em;
+		color: $color-red;
+		border: none;
+		/* background-color: rgba(246, 241, 211, 0.1); */
+		@include background-image(linear-gradient(top, #999999 0%, #ffffff 12%));
+		@include border-radius;
+	}
+}
+
+section .new_note {
+	margin-left: 12px;
+	
+	#note_submit {
+		margin-bottom: 10px;
+	}
 }
 
 .content {

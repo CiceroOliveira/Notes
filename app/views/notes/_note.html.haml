@@ -1,6 +1,6 @@
 %li{:id => note.id, :class => "note #{note.color}"}
-  %p=note.text
-
+  %p
+    =note.text
   %span.left
     =link_to 'Edit', edit_note_path(note), :remote => true
   %span.right

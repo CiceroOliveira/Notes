@@ -91,6 +91,7 @@ GEM
       railties (~> 3.0)
     hashie (1.0.0)
     i18n (0.5.0)
+    in_place_editing (1.0.0)
     jquery-rails (1.0)
       rails (~> 3.0)
       thor (~> 0.14)
@@ -185,6 +186,7 @@ DEPENDENCIES
   fancy-buttons
   haml
   haml-rails
+  in_place_editing
   jquery-rails
   launchy
   mongoid (= 2.0.0.rc.7)

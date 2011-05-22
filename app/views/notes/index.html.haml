@@ -1,5 +1,7 @@
-.new_note.grid_12
-  = link_to 'New Sticky', new_note_path, :class => "new_note_button"
-%ul.notes
+.new_sticky.grid_12
+  %div#note-form{title: "Note", style: "display:none"}
+    =#%div#note-form{title: "Note"}
+  
+  = link_to 'New Sticky', new_note_path, :class => "new_note_button", :remote => true
+%notes
   =render @notes
-%div#note-form{title: "Note", style: "display:none"}
