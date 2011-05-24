@@ -9,6 +9,7 @@
     = stylesheet_link_tag 'grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'text.css', :media => 'screen, projection'
     = stylesheet_link_tag 'application.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'clear_grid'
     /[if lt IE 7]
       = stylesheet_link_tag 'ie6.css', :media => 'screen, projection'
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Reenie+Beanie:regular"
@@ -18,5 +19,7 @@
     %header.grid_12
       %h1
         =link_to "Sticky Stacks", root_url
-    %section.content.grid_12
+    .clear
+    %section#content.grid_12
       = yield
+    .clear

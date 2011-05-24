@@ -9,4 +9,6 @@ class Note
   
   validates :color, :inclusion => {:in => COLORS}
   validates :text, :owner, :presence => true
+  
+  embedded_in :stack
 end

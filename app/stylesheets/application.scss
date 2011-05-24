@@ -4,6 +4,14 @@ $color-cream: #f6f1d3;
 $color-brown: #47423c;
 $color-red: #d95853;
 
+ol {
+	list-style: none;
+}
+
+ul, li {
+	margin: 0;
+}
+
 body {
 	background-color: $color-brown;
 }
@@ -27,7 +35,7 @@ header {
 }
 
 *.new_note_button {
-	margin-top: 1em;
+	margin: 1em;
 }
 
 section .new_note, .ui-dialog {
@@ -67,7 +75,7 @@ section .new_note {
 	}
 }
 
-.content {
+#content {
 	background-color: $color-cream;
 	min-height: 500px;
 }
@@ -114,7 +122,7 @@ section .new_note {
 	}
 	
 	p {
-		font-family: arial, sans-serif;
+		font-family: "Reenie Beanie", arial, sans-serif;
 		font-size: 200%;
 		line-height: 1.0;
 		padding: 10px;
@@ -155,4 +163,12 @@ section .new_note {
 	h1 {
 		color: $alp-green;
 	}
+}
+
+#stacks li h2 {
+	background-color: $color-cream;
+	border: 3px solid white;
+	$default-box-shadow-color: $color-red;
+	//@include box-shadow();//(10px 10px 7px rgba(0, 0, 0, .7));
+	@include border-radius;
 }

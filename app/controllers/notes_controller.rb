@@ -2,7 +2,8 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.xml
   def index
-    @notes = Note.all
+    @stacks = Stack.first
+    @notes = @stacks.notes.all
 
     respond_to do |format|
       format.html # index.html.erb
