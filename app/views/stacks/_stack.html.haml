@@ -1,5 +1,5 @@
-%li{:id => stack.id}
+%li{:id => stack.id, :class => 'grid_12 alpha omega'}
   %h2
     =link_to stack.name, "#"
   %ol.notes
-    =render @notes
+    =render stack.notes

@@ -8,6 +8,10 @@
 
   %fieldset
     .field
+    = f.label :stack
+    = f.collection_select(:stack, Stack.all, :_id, :name)
+  %fieldset
+    .field
       = f.label :text
       = f.text_area :text, :placeholder => "Type content...", :rows => 3, :autofocus => true
       

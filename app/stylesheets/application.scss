@@ -30,11 +30,11 @@ header {
 	}
 }
 
-*.new_note_button, #note_submit {
+*.button, #note_submit {
 	@include fancy-button($color-red);
 }
 
-*.new_note_button {
+*.button {
 	margin: 1em;
 }
 

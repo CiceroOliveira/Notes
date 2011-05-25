@@ -2,8 +2,8 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.xml
   def index
-    @stacks = Stack.first
-    @notes = @stacks.notes.all
+    @stacks = Stack.all
+    #@notes = @stacks.notes.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,10 +42,12 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.xml
   def create
-    @note = Note.new(params[:note])
+    puts "params => #{params["note"]["stack"]}"
+    #@stack = Stack.find(params["note"]["stack"])
+    @stack = Stack.new(params[:note])
 
     respond_to do |format|
-      if @note.save
+      if @stack.save
         format.html { redirect_to(notes_path, :notice => 'Note was successfully created.') }
         format.xml  { render :xml => @note, :status => :created, :location => @note }
         format.js

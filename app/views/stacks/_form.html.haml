@@ -1,0 +1,16 @@
+= form_for @stack do |f|
+  -if @stack.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@stack.errors.count, "error")} prohibited this note from being saved:"
+      %ul
+        - @stack.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+    .field
+      = f.label :name
+      = f.text_field :name, :placeholder => "Stack category.", :rows => 3, :autofocus => true
+        
+  %fieldset
+    .actions
+      = f.submit 'Create Stack'

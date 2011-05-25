@@ -1,6 +1,6 @@
 Notes::Application.routes.draw do
-  #resources :stacks do
-    resources :notes
+  resources :stacks
+  resources :notes
   #end
 
   # The priority is based upon order of creation:
