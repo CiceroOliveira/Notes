@@ -50,4 +50,22 @@ class StacksController < ApplicationController
     end
   end
   
+  def edit
+    @stack = Stack.find(params[:id])
+  end
+
+  def update
+    @stack = Stack.find(params[:id])
+
+    respond_to do |format|
+      if @stack.update_attributes(params[:stack])
+        format.html { redirect_to(stacks_path) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
 end
