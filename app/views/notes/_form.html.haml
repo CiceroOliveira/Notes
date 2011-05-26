@@ -1,4 +1,7 @@
-= form_for @note do |f|
+%h2
+  =@stack.name
+  
+= form_for [@stack,  @note] do |f|
   -if @note.errors.any?
     #error_explanation
       %h2= "#{pluralize(@note.errors.count, "error")} prohibited this note from being saved:"
@@ -6,10 +9,6 @@
         - @note.errors.full_messages.each do |msg|
           %li= msg
 
-  %fieldset
-    .field
-    = f.label :stack
-    = f.collection_select(:stack, Stack.all, :_id, :name)
   %fieldset
     .field
       = f.label :text

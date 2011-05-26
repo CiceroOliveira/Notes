@@ -25,7 +25,8 @@ class NotesController < ApplicationController
   # GET /notes/new
   # GET /notes/new.xml
   def new
-    @note = Note.new
+    @stack = Stack.find(params[:stack_id])
+    @note = @stack.notes.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,24 +37,24 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
-    @note = Note.find(params[:id])
+    @stack = Stack.find(params[:stack_id])
+    @note = @stack.notes.find(params[:id])
   end
 
   # POST /notes
   # POST /notes.xml
   def create
-    puts "params => #{params["note"]["stack"]}"
-    #@stack = Stack.find(params["note"]["stack"])
-    @stack = Stack.new(params[:note])
+    @stack = Stack.find(params[:stack_id])
+    @note = @stack.notes.create!(params[:note])
 
     respond_to do |format|
       if @stack.save
-        format.html { redirect_to(notes_path, :notice => 'Note was successfully created.') }
-        format.xml  { render :xml => @note, :status => :created, :location => @note }
+        format.html { redirect_to(stacks_path, :notice => 'Note was successfully created.') }
+        format.xml  { render :xml => @stack, :status => :created, :location => @note }
         format.js
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @note.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -61,11 +62,12 @@ class NotesController < ApplicationController
   # PUT /notes/1
   # PUT /notes/1.xml
   def update
-    @note = Note.find(params[:id])
+    @stack = Stack.find(params[:stack_id])
+    @note = @stack.notes.find(params[:id])
 
     respond_to do |format|
       if @note.update_attributes(params[:note])
-        format.html { redirect_to(notes_path) }
+        format.html { redirect_to(stacks_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -77,11 +79,12 @@ class NotesController < ApplicationController
   # DELETE /notes/1
   # DELETE /notes/1.xml
   def destroy
-    @note = Note.find(params[:id])
+    @stack = Stack.find(params[:stack_id])
+    @note = @stack.notes.where(_id: params[:id])
     @note.destroy
 
     respond_to do |format|
-      format.html { redirect_to(notes_url) }
+      format.html { redirect_to(stacks_path) }
       format.xml  { head :ok }
     end
   end

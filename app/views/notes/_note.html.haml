@@ -2,6 +2,6 @@
   %p
     =note.text
   %span.left
-    =link_to 'Edit', edit_note_path(note), :remote => true
+    =link_to 'Edit', edit_stack_note_path(note.stack, note), :remote => true
   %span.right
-    = link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete
+    = link_to 'Destroy', [note.stack, note], :confirm => 'Are you sure?', :method => :delete

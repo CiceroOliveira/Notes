@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @stack.name
+
+= link_to 'Edit', edit_stack_path(@stack)
+\|
+= link_to 'Back', stacks_path
