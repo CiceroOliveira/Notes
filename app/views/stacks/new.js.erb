@@ -1,0 +1,10 @@
+$("#ajax-form").dialog({
+  autoOpen: true,
+  height: 300,
+  width: 400,
+  modal: true,
+  title: 'New Stack',
+  open: function() {
+    $("#ajax-form").html("<%= escape_javascript(render('form')) %>")
+  },
+});

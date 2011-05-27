@@ -16,9 +16,14 @@ body {
 	background-color: $color-brown;
 }
 
-header {
+#page_header {
 	background-color: $color-red;
 	text-shadow: 0px 2px 3px rgba(231, 81, 81, 1);
+	border-bottom: 2px solid white;
+	
+	h1 {
+		margin-bottom: 0;
+	}
 	
 	a {
 		color: #fff;
@@ -27,6 +32,10 @@ header {
 		text-transform: uppercase;
 		margin-left: 1em;
 		text-decoration: none;
+	}
+	
+	.new_stack a {
+		margin: 0 0 12px 0;
 	}
 }
 
@@ -165,10 +174,28 @@ section .new_note {
 	}
 }
 
-#stacks li h2 {
-	background-color: $color-cream;
-	border: 3px solid white;
-	$default-box-shadow-color: $color-red;
+#stacks li header {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid $color-red;
+	//$default-box-shadow-color: $color-red;
 	//@include box-shadow();//(10px 10px 7px rgba(0, 0, 0, .7));
-	@include border-radius;
+	//@include border-radius;
+	padding: 0 0 0 12px;
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+		
+		&:hover {
+			color: $color-cream;
+		}
+		
+		&.button {
+			margin: 0;
+		}
+	}
+	
+	h2 {
+		margin: 0;
+	}
 }

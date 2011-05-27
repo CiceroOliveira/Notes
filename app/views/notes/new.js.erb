@@ -4,9 +4,6 @@ $("#note-form").dialog({
   width: 400,
   modal: true,
   title: 'New Sticky',
-  /*buttons: {
-    "Edit": function() { $("#edit_note<%= @note.id %>").submit() },
-  },*/
   open: function() {
     $("#note-form").html("<%= escape_javascript(render('form')) %>")
   },

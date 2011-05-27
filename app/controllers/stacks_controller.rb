@@ -11,6 +11,11 @@ class StacksController < ApplicationController
   
   def index
     @stacks = Stack.desc(:created_at)
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @notes }
+    end
   end
   
   # GET /stacks/new
@@ -21,6 +26,7 @@ class StacksController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @stack }
+      format.js
     end
   end
   

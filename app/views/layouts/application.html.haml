@@ -4,7 +4,7 @@
     = csrf_meta_tag
     /[if lt IE 9]
       = javascript_include_tag 'html5'
-    = javascript_include_tag :defaults
+    = javascript_include_tag 'jquery.min', 'rails', 'application'
     = javascript_include_tag 'jquery-ui-1.8.13.custom.min'
     = stylesheet_link_tag 'grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'text.css', :media => 'screen, projection'
@@ -16,9 +16,12 @@
     = stylesheet_link_tag "sunny/jquery-ui-1.8.13.custom"
     %title Sticky Stacks
   %body.container_12
-    %header.grid_12
+    %header#page_header.grid_12
       %h1
-        =link_to "Sticky Stacks", root_url
+        =link_to "Sticky Stacks", root_url        
+      .new_stack.grid_3
+        = link_to 'New Stack', new_stack_path, :class => "button", :remote => true
+
     .clear
     %section#content.grid_12
       = yield

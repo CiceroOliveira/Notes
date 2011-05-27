@@ -1,6 +1,10 @@
 %li{:id => stack.id, :class => 'grid_12 alpha omega'}
-  %h2
-    =link_to stack.name, stack
-    =link_to 'New Sticky', new_stack_note_path(stack), :class => "button", :remote => true
+  %header
+    %span.grid_3
+      %h2
+        =link_to stack.name, stack
+    %span.grid_3
+      =link_to 'New Sticky', new_stack_note_path(stack), :class => "button", :remote => true
+    .clearfix
   %ol.notes
     =render stack.notes
