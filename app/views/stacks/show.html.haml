@@ -1,9 +1,18 @@
-%p#notice= notice
+#notice= notice
 
-%p
-  %b Name:
-  = @stack.name
-
+#stacks.grid_12.alpha.omega
+  %ol.grid_12.alpha.omega
+    %li{:id => @stack.id, :class => 'grid_12 alpha omega'}
+      %header
+        %span.grid_3
+          %h2
+            =@stack.name
+        %span.grid_3
+          =link_to 'New Sticky', new_stack_note_path(@stack), :class => "button", :remote => true
+        .clearfix
+      %ol.notes
+        =render @stack.notes
+    
 = link_to 'Edit', edit_stack_path(@stack)
 \|
 = link_to 'Back', stacks_path
