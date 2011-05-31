@@ -6,11 +6,13 @@
         - @stack.errors.full_messages.each do |msg|
           %li= msg
 
+  = #f.hidden_field :user_id, current_user.id
+  
   %fieldset
     .field
       = f.label :name
       = f.text_field :name, :placeholder => "Stack category.", :rows => 3
-        
+    
   %fieldset
     .actions
       = f.submit

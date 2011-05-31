@@ -18,11 +18,6 @@
     .field
       = f.label :color
       = f.collection_select(:color, Note::COLORS, :to_s, :to_s)
-      
-  %fieldset
-    .field
-      = f.label :owner
-      = f.text_field :owner
   
   %fieldset
     .actions

@@ -1,0 +1,19 @@
+%p
+  A simple web app to save your sticky notes to help you remember.
+
+%h1
+  How it works
+
+%p 
+  You can organize your sticky notes in stacks so start by creating a stack and you'll be ready to add your notes to that stack.
+  
+%p 
+  No need to create yet another user account. Just connect to one of your existing ones and yo'll be ready to roll!
+  
+%h2
+  Login with:
+  %nav
+    =link_to image_tag("/images/social_media_icons/Twitter_48.png"), "/auth/twitter"
+    =link_to image_tag("/images/social_media_icons/Facebook_48.png"), "/auth/facebook"
+    =link_to image_tag("/images/social_media_icons/Google_48.png"), "/auth/google"
+    =link_to image_tag("/images/social_media_icons/Yahoo_48.png"), "/auth/yahoo"

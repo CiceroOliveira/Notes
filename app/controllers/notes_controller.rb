@@ -1,9 +1,11 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /notes
   # GET /notes.xml
   def index
-    @stacks = Stack.all
-    #@notes = @stacks.notes.all
+    @stack = Stack.find(params[:stack_id])
+    @notes = @stack.notes.all
 
     respond_to do |format|
       format.html # index.html.erb

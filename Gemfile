@@ -46,3 +46,4 @@ gem "launchy", :group => :test
 gem "database_cleaner", :group => :test
 gem "fancy-buttons"
 gem "in_place_editing"
+gem "omniauth"

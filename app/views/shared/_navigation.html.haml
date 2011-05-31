@@ -1,0 +1,8 @@
+- if user_signed_in?
+  %li
+    = link_to(current_user.name, current_user)
+  %li
+    = link_to('Logout', signout_path)
+- else
+  %li
+    = link_to('Login', signin_path)

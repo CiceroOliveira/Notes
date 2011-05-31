@@ -8,12 +8,14 @@ describe NotesController do
 
   def mock_note(stubs={})
     @mock_note ||= mock_model(Note, stubs).as_null_object
+    @mock_stack ||= mock_model(Stack, stubs).as_null_object
   end
 
   describe "GET index" do
     it "assigns all notes as @notes" do
       Note.stub(:all) { [mock_note] }
-      get :index
+      Stack.stub(:id) { [mock_stack] }
+      get :index, :stack_id => mock_note.stack.id
       assigns(:notes).should eq([mock_note])
     end
   end

@@ -4,7 +4,11 @@
   #ajax-form{title: "Stack", style: "display:none"}
     =#%div#note-form{title: "Note"}
 .clear
-  
-#stacks.grid_12.alpha.omega
-  %ol.grid_12.alpha.omega
-    =render @stacks
+
+- if @stacks.count > 0
+  #stacks.grid_12.alpha.omega
+    %ol.grid_12.alpha.omega
+      =render @stacks
+- else
+  You don't have any stacks.
+  = link_to 'Create your first stack', new_stack_path, :remote => true

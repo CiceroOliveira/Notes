@@ -1,0 +1,10 @@
+= form_for @user do |f|
+  
+  %fieldset
+    .field
+      = f.label :email
+      = f.email_field :email
+  
+  %fieldset
+    .actions
+      = f.submit "Sign in"

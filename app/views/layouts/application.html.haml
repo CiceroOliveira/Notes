@@ -21,8 +21,12 @@
         =link_to "Sticky Stacks", root_url        
       .new_stack.grid_3
         = link_to 'New Stack', new_stack_path, :class => "button", :remote => true
-
+      %nav
+        %ul
+          =render 'shared/navigation'
     .clear
     %section#content.grid_12
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
       = yield
     .clear

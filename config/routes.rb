@@ -1,4 +1,14 @@
 Notes::Application.routes.draw do
+  
+  resources :pages, :only => :home
+  
+  resources :users, only: [:show, :edit, :update]
+
+  match '/auth/:provider/callback' => "sessions#create"
+  match '/auth/failure' => "sessions#failure"
+  match '/signout' => "sessions#destroy", :as => :signout
+  match '/signin' => "sessions#new", :as => :signin
+  
   resources :stacks do
     resources :notes
   end
@@ -52,7 +62,7 @@ Notes::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "stacks#index"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

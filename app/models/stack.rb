@@ -3,7 +3,9 @@ class Stack
   include Mongoid::Timestamps
   field :name, :type => String
   
-  validates :name, :presence => true
+  validates :name, :user_id, :presence => true
   
   embeds_many :notes
+  
+  referenced_in :user
 end

@@ -1,0 +1,207 @@
+@import "base";
+
+$color-cream: #f6f1d3;
+$color-brown: #47423c;
+$color-red: #d95853;
+
+ol {
+	list-style: none;
+}
+
+ul, li {
+	margin: 0;
+}
+
+body {
+	background-color: $color-cream;
+}
+
+#page_header {
+	background-color: $color-red;
+	text-shadow: 0px 2px 3px rgba(231, 81, 81, 1);
+	border-bottom: 2px solid white;
+	
+	h1 {
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+	
+	a {
+		color: #fff;
+		font-family: "Heveltica Neue", Helvetica, Arial, sans-serif;
+		font-size: 150%;
+		margin-left: 1em;
+		text-decoration: none;
+	}
+	
+	.new_stack a {
+		margin: 0 0 12px 0;
+	}
+	
+	nav {
+		float: right;
+		margin-right: 12px;
+	}
+}
+
+*.button, #note_submit {
+	@include fancy-button($color-red);
+}
+
+*.button {
+	margin: 1em;
+}
+
+section .new_note, .ui-dialog {
+	
+	fieldset {
+		margin: 0 0 10px 0;
+		
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	label{
+		display: block;
+		font-weight: bold;
+		line-height: 1.4;
+		color: $color-red;
+		text-shadow: 0 1px 1px #fff;
+	}
+	
+	textarea {
+		padding: 5px 8px;
+		font-size: 1.2em;
+		color: $color-red;
+		border: none;
+		/* background-color: rgba(246, 241, 211, 0.1); */
+		@include background-image(linear-gradient(top, #999999 0%, #ffffff 12%));
+		@include border-radius;
+	}
+}
+
+section .new_note {
+	margin-left: 12px;
+	
+	#note_submit {
+		margin-bottom: 10px;
+	}
+}
+
+#content {
+	background-color: #fff;
+	min-height: 500px;
+}
+
+.note {
+	position: relative;
+	float: left;
+	width: 180px;
+	height: 180px;
+	list-style: none;
+	color: #333;
+	margin: 15px;
+	padding: 10px;
+	text-align: center;
+	@include box-shadow(5px 5px 7px rgba(33, 33, 33, .7));
+	@include rotate(-6deg);
+	@include transition-property(transform);
+	@include transition-duration(.2s);
+	@include transition-timing-function(linear);
+	
+	&:nth-child(even) {
+		@include rotate(4deg);
+		position: relative;
+		top: 5px;
+	}
+	
+	&:nth-child(3n) {
+		@include rotate(-3deg);
+		position: relative;
+		top: -5px;
+	}
+	
+	&:nth-child(5n) {
+		@include rotate(5deg);
+		position: relative;
+		top: 10px;
+	}
+	
+	&:hover, &:focus {
+		@include box-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+		@include scale(1.25);
+		position: relative;
+		z-index: 5;
+	}
+	
+	p {
+		font-family: "Reenie Beanie", arial, sans-serif;
+		font-size: 200%;
+		line-height: 1.0;
+		padding: 10px;
+		margin: 0;
+		height: 140px;
+		overflow: hidden;
+	}
+}
+
+.yellow {
+	background-color: $alp-yellow;
+}
+
+.green {
+	background-color: $alp-green;
+}
+
+.pink {
+	background-color: $alp-pink;
+}
+
+.note span {
+	display: block;
+	bottom: 5px;
+	color: #666;
+	//font-size: 125%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+section .new_note {
+	h1 {
+		color: $alp-green;
+	}
+}
+
+#stacks li header {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid $color-red;
+	//$default-box-shadow-color: $color-red;
+	//@include box-shadow();//(10px 10px 7px rgba(0, 0, 0, .7));
+	//@include border-radius;
+	padding: 0 0 0 12px;
+	text-shadow: 0px 1px 1px #fff;
+	
+	a {
+		color: $color-cream;
+		text-decoration: none;
+		
+		&:hover {
+			@include fancy-button($color-cream);
+		}
+		
+		&.button {
+			margin: 0;
+		}
+	}
+	
+	h2 {
+		margin: 0;
+	}
+}

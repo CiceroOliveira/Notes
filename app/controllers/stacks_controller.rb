@@ -1,4 +1,5 @@
 class StacksController < ApplicationController
+  before_filter :authenticate_user!
   
   def show
     @stack = Stack.find(params[:id])
@@ -10,7 +11,7 @@ class StacksController < ApplicationController
   end
   
   def index
-    @stacks = Stack.desc(:created_at)
+    @stacks = current_user.stacks.desc(:created_at)
     
     respond_to do |format|
       format.html # index.html.erb
@@ -22,7 +23,6 @@ class StacksController < ApplicationController
   # GET /stacks/new.xml
   def new
     @stack = Stack.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @stack }
@@ -34,7 +34,8 @@ class StacksController < ApplicationController
   # POST /stacks.xml
   def create
     @stack = Stack.new(params[:stack])
-    puts @stack
+    @stack.user_id = current_user.id
+    
     respond_to do |format|
       if @stack.save
         format.html { redirect_to(root_url, :notice => 'Note was successfully created.') }

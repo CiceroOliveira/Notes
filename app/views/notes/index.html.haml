@@ -1,14 +1,12 @@
-.new_sticky.grid_3
-  #note-form{title: "Note", style: "display:none"}
-    =#%div#note-form{title: "Note"}
-
-  = link_to 'New Sticky', new_note_path, :class => "button"#, :remote => true
-
-.new_stack.grid_3
-  = link_to 'New Stack', new_stack_path, :class => "button"
-
-.clear
+%h2
+  = @stack.name
 
 #stacks.grid_12.alpha.omega
   %ol.grid_12.alpha.omega
-    =render @stacks
+    =render @notes
+.clear
+
+.new_sticky.grid_3
+  = link_to 'Stack', stack_path(@stack), :class => "button"
+.clear
+

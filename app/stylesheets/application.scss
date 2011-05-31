@@ -13,12 +13,14 @@ ul, li {
 }
 
 body {
-	background-color: $color-brown;
+	background-color: $color-cream;
+	font-family: "Heveltica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
 }
 
 #page_header {
-	background-color: $color-red;
-	text-shadow: 0px 2px 3px rgba(231, 81, 81, 1);
+	background-color: #333; //$color-red;
+	text-shadow: 0px 2px 3px rgba(200, 200, 200, 1); //rgba(231, 81, 81, 1);
 	border-bottom: 2px solid white;
 	
 	h1 {
@@ -37,6 +39,18 @@ body {
 	.new_stack a {
 		margin: 0 0 12px 0;
 	}
+	
+	nav {
+		float: right;
+		margin: 0 12px;
+		
+		li {
+			list-style: none;
+			float: left;
+		}
+		
+	}
+	
 }
 
 *.button, #note_submit {
@@ -85,7 +99,7 @@ section .new_note {
 }
 
 #content {
-	background-color: $color-cream;
+	background-color: #fff;
 	min-height: 500px;
 }
 
