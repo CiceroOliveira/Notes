@@ -13,17 +13,17 @@ ul, li {
 }
 
 body {
-	background-color: $color-cream;
+	background-color: white;
 	font-family: "Heveltica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 
 #page_header {
-	background-color: #333; //$color-red;
-	text-shadow: 0px 2px 3px rgba(200, 200, 200, 1); //rgba(231, 81, 81, 1);
-	border-bottom: 2px solid white;
+	background-color: #666; //$color-red;
+	border: 1px solid black;
 	
 	h1 {
+		text-shadow: 0px 2px 3px rgba(200, 200, 200, 1); //rgba(231, 81, 81, 1);
 		margin-bottom: 0;
 		text-transform: uppercase;
 	}
@@ -40,13 +40,31 @@ body {
 		margin: 0 0 12px 0;
 	}
 	
-	nav {
+	nav ul {
 		float: right;
-		margin: 0 12px;
 		
 		li {
 			list-style: none;
 			float: left;
+			margin: 0 0 0 5px;
+		
+			a {
+				padding: 5px 15px;
+				font-weight: bold;
+				color: #ccc;
+				color: rgba(255, 255, 255, 0.7);
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+				@include border-radius(14px);
+				@include transition-property(all);
+				@include transition-duration(.3s);
+				@include transition-timing-function(easy-in-out);
+			
+				&:hover, &:focus {
+					font-weight: bold;
+					color: #fff;
+					background: rgba(255, 255, 255, 0.15);
+				}
+			}
 		}
 		
 	}
@@ -54,7 +72,7 @@ body {
 }
 
 *.button, #note_submit {
-	@include fancy-button($color-red);
+	@include fancy-button(#666);
 }
 
 *.button {
@@ -101,6 +119,7 @@ section .new_note {
 #content {
 	background-color: #fff;
 	min-height: 500px;
+	border: 1px solid black;
 }
 
 .note {
@@ -190,7 +209,7 @@ section .new_note {
 
 #stacks li header {
 	background-color: rgba(0, 0, 0, 0.2);
-	border-bottom: 2px solid $color-red;
+	border-bottom: 2px solid black;
 	//$default-box-shadow-color: $color-red;
 	//@include box-shadow();//(10px 10px 7px rgba(0, 0, 0, .7));
 	//@include border-radius;
@@ -198,11 +217,11 @@ section .new_note {
 	text-shadow: 0px 1px 1px #fff;
 	
 	a {
-		color: $color-cream;
+		color: #fff;
 		text-decoration: none;
 		
 		&:hover {
-			@include fancy-button($color-cream);
+			@include fancy-button(#ccc);
 		}
 		
 		&.button {
@@ -212,5 +231,11 @@ section .new_note {
 	
 	h2 {
 		margin: 0;
+	}
+}
+
+section#welcome_info {
+	h1 {
+		border-bottom: 1px solid black;
 	}
 }

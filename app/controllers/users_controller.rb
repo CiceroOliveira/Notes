@@ -15,4 +15,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+  
+  def signin
+  end
 end

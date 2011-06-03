@@ -1,93 +1,70 @@
 class NotesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :load_stack
+
+  respond_to :html
+  respond_to :js, only: [:new, :create]
   
-  # GET /notes
-  # GET /notes.xml
   def index
-    @stack = Stack.find(params[:stack_id])
     @notes = @stack.notes.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @notes }
-    end
+    respond_with(@notes)
   end
 
-  # GET /notes/1
-  # GET /notes/1.xml
   def show
-    @note = Note.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @note }
-    end
+    @note = @stack.notes.find(params[:id])
+    respond_with(@note)
   end
 
-  # GET /notes/new
-  # GET /notes/new.xml
   def new
-    @stack = Stack.find(params[:stack_id])
     @note = @stack.notes.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @note }
-      format.js
-    end
+    respond_with(@note)
   end
 
-  # GET /notes/1/edit
   def edit
-    @stack = Stack.find(params[:stack_id])
     @note = @stack.notes.find(params[:id])
+    respond_with(@note)
   end
 
-  # POST /notes
-  # POST /notes.xml
   def create
-    @stack = Stack.find(params[:stack_id])
     @note = @stack.notes.create!(params[:note])
+    respond_with([@stack, @note], :location => stacks_path)
+      
 
-    respond_to do |format|
-      if @stack.save
-        format.html { redirect_to(stacks_path, :notice => 'Note was successfully created.') }
-        format.xml  { render :xml => @stack, :status => :created, :location => @note }
-        format.js
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @stack.save
+    #     format.html { redirect_to(stacks_path, :notice => 'Note was successfully created.') }
+    #     format.xml  { render :xml => @stack, :status => :created, :location => @note }
+    #     format.js
+    #   else
+    #     format.html { render :action => "new" }
+    #     format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
+    #   end
+    # end
   end
 
-  # PUT /notes/1
-  # PUT /notes/1.xml
   def update
-    @stack = Stack.find(params[:stack_id])
     @note = @stack.notes.find(params[:id])
-
-    respond_to do |format|
-      if @note.update_attributes(params[:note])
-        format.html { redirect_to(stacks_path) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @note.errors, :status => :unprocessable_entity }
-      end
-    end
+    respond_with(@note)
+    # respond_to do |format|
+    #   if @note.update_attributes(params[:note])
+    #     format.html { redirect_to(stacks_path) }
+    #     format.xml  { head :ok }
+    #   else
+    #     format.html { render :action => "edit" }
+    #     format.xml  { render :xml => @note.errors, :status => :unprocessable_entity }
+    #   end
+    # end
   end
 
-  # DELETE /notes/1
-  # DELETE /notes/1.xml
   def destroy
-    @stack = Stack.find(params[:stack_id])
-    @note = @stack.notes.where(_id: params[:id])
+    @note = @stack.notes.where(_id: params[:id]) 
     @note.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(stacks_path) }
-      format.xml  { head :ok }
-    end
+    respond_with([@stack, @note], :location => stacks_path)
   end
+  
+  private
+  
+    def load_stack
+      @stack = Stack.find(params[:stack_id])
+    end
 end

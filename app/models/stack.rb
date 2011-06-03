@@ -8,4 +8,10 @@ class Stack
   embeds_many :notes
   
   referenced_in :user
+  
+  default_scope desc(:created_at)
+  
+  def to_s
+    stack.name
+  end
 end

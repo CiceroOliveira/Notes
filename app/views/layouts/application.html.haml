@@ -18,10 +18,8 @@
   %body.container_12
     %header#page_header.grid_12
       %h1
-        =link_to "Sticky Stacks", root_url        
-      .new_stack.grid_3
-        = link_to 'New Stack', new_stack_path, :class => "button", :remote => true
-      %nav
+        =link_to "Sticky Stacks", root_url
+      %nav.grid_12.alpha.omega
         %ul
           =render 'shared/navigation'
     .clear

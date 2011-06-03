@@ -7,21 +7,21 @@ class SessionsController < ApplicationController
     if !user.email
       redirect_to edit_user_path(user), :alert => "Please enter your email address."
     else
-      redirect_to root_url, :notice => "Signed in!"
+      redirect_to root_url#, :notice => "Signed in!"
     end
   end
   
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, :notice => "Signed out!"
+    redirect_to root_url#, :notice => "Signed out!"
   end
   
-  def new
-    redirect_to '/auth/twitter'
-  end
+  #def new
+  #  redirect_to '/auth/twitter'
+  #end
   
   def failure
-    redirect_to root_url, :alert => "Authentication erro #{params[:message].humanize}"
+    redirect_to root_url, :alert => "Authentication error #{params[:message].humanize}"
   end
   
 end

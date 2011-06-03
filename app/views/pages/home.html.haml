@@ -1,19 +1,26 @@
-%p
-  A simple web app to save your sticky notes to help you remember.
+%section#welcome_info.grid_7
+  %p
+    A simple web app to save your sticky notes to help you remember.
 
-%h1
-  How it works
+  %h1
+    How it works
 
-%p 
-  You can organize your sticky notes in stacks so start by creating a stack and you'll be ready to add your notes to that stack.
+  %p 
+    You can organize your sticky notes in stacks so start by creating a stack and you'll be ready to add your notes to that stack.
   
-%p 
-  No need to create yet another user account. Just connect to one of your existing ones and yo'll be ready to roll!
-  
-%h2
-  Login with:
-  %nav
-    =link_to image_tag("/images/social_media_icons/Twitter_128.png"), "/auth/twitter"
-    =link_to image_tag("/images/social_media_icons/Facebook_128.png"), "/auth/facebook"
-    =link_to image_tag("/images/social_media_icons/Google_128.png"), "/auth/google"
-    =link_to image_tag("/images/social_media_icons/Yahoo_128.png"), "/auth/yahoo"
+  %p 
+    No need to create yet another user account. Just connect to one of your existing ones and yo'll be ready to roll!
+
+%section#authentication_services.grid_4
+  %h2
+    Login with:
+    %nav
+      =link_to image_tag("/images/icons/authbuttons/png/twitter_64.png"), "/auth/twitter"
+      =link_to image_tag("/images/icons/authbuttons/png/facebook_64.png"), "/auth/facebook"
+      =link_to image_tag("/images/icons/authbuttons/png/github_64.png"), "/auth/github"
+      =link_to image_tag("/images/icons/authbuttons/png/openid_64.png"), "/auth/open_id"
+      =#link_to image_tag("/images/icons/authbuttons/png/google_64.png"), "/auth/google"
+      =#link_to image_tag("/images/icons/authbuttons/png/yahoo_64.png"), "/auth/yahoo"
+      =#link_to image_tag("/images/icons/authbuttons/png/github_64.png"), "/auth/github"
+      =#link_to image_tag("/images/icons/authbuttons/png/linkedin_64.png"), "/auth/linkedin"
+      =#link_to image_tag("/images/icons/authbuttons/png/myspace_64.png"), "/auth/myspace"

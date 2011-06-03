@@ -1,5 +1,6 @@
 class StacksController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html
   
   def show
     @stack = Stack.find(params[:id])
@@ -11,7 +12,7 @@ class StacksController < ApplicationController
   end
   
   def index
-    @stacks = current_user.stacks.desc(:created_at)
+    @stacks = current_user.stacks
     
     respond_to do |format|
       format.html # index.html.erb

@@ -1,5 +1,5 @@
 Notes::Application.routes.draw do
-  
+
   resources :pages, :only => :home
   
   resources :users, only: [:show, :edit, :update]

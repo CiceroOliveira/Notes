@@ -7,7 +7,6 @@ require 'spec_helper'
 describe NotesController do
 
   def mock_note(stubs={})
-    @mock_note ||= mock_model(Note, stubs).as_null_object
     @mock_stack ||= mock_model(Stack, stubs).as_null_object
   end
 
