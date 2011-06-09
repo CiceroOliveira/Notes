@@ -11,5 +11,4 @@ public/system/*
 tmp/restart.txt
 coverage/
 .DS_Store
-config/initializers/omniauth.rb
 config/heroku.yml
