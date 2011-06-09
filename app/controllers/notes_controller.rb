@@ -3,7 +3,7 @@ class NotesController < ApplicationController
   before_filter :load_stack
 
   respond_to :html
-  respond_to :js, only: [:new, :create]
+  respond_to :js, only: [:new, :create, :edit, :update]
   
   def index
     @notes = @stack.notes.all
@@ -44,7 +44,10 @@ class NotesController < ApplicationController
 
   def update
     @note = @stack.notes.find(params[:id])
-    respond_with(@note)
+    @note.update_attributes(params[:note])
+    respond_with(@note) do |format|
+      format.html { redirect_to(stacks_path) }
+    end
     # respond_to do |format|
     #   if @note.update_attributes(params[:note])
     #     format.html { redirect_to(stacks_path) }
