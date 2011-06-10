@@ -2,7 +2,7 @@ require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
   provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
-  provider :twitter, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
   provider :open_id, OpenID::Store::Filesystem.new('/tmp')
   
   #provider :twitter, 'us2z9AseWlatBftJkadylQ', 'dgMTnsVACkueXQ5yPuO08cgUhRYqKRLiWO4dD6fR6I'
