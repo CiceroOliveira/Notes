@@ -6,7 +6,6 @@ tmp/
 .rvmrc
 config/database.yml
 public/cache/
-public/stylesheets/compiled/
 public/system/*
 tmp/restart.txt
 coverage/

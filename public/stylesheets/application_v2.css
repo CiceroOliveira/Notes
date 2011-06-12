@@ -1,0 +1,408 @@
+/* incase an inverted custom gradient isn't specified */
+/* line 177, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, *.button, #note_submit, #stacks li header a:hover {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1305694107') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, .button::-moz-focus-inner, #note_submit::-moz-focus-inner, #stacks li header a:hover::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, .button:focus, #note_submit:focus, #stacks li header a:focus:hover {
+  outline: none;
+}
+
+/* line 7, ../../app/stylesheets/application_v2.scss */
+ol {
+  list-style: none;
+}
+
+/* line 11, ../../app/stylesheets/application_v2.scss */
+ul, li {
+  margin: 0;
+}
+
+/* line 15, ../../app/stylesheets/application_v2.scss */
+body {
+  background-color: #f6f1d3;
+}
+
+/* line 19, ../../app/stylesheets/application_v2.scss */
+#page_header {
+  background-color: #d95853;
+  text-shadow: 0px 2px 3px #e75151;
+  border-bottom: 2px solid white;
+}
+/* line 24, ../../app/stylesheets/application_v2.scss */
+#page_header h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+/* line 29, ../../app/stylesheets/application_v2.scss */
+#page_header a {
+  color: #fff;
+  font-family: "Heveltica Neue", Helvetica, Arial, sans-serif;
+  font-size: 150%;
+  margin-left: 1em;
+  text-decoration: none;
+}
+/* line 37, ../../app/stylesheets/application_v2.scss */
+#page_header .new_stack a {
+  margin: 0 0 12px 0;
+}
+/* line 41, ../../app/stylesheets/application_v2.scss */
+#page_header nav {
+  float: right;
+  margin-right: 12px;
+}
+
+/* line 47, ../../app/stylesheets/application_v2.scss */
+*.button, #note_submit {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ff352d;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7dedd), color-stop(10%, #e79592), color-stop(50%, #d64c46), color-stop(50%, #d3403a), color-stop(100%, #dd6864));
+  background-image: -webkit-linear-gradient(#f7dedd, #e79592 10%, #d64c46 50%, #d3403a 50%, #dd6864);
+  background-image: -moz-linear-gradient(#f7dedd, #e79592 10%, #d64c46 50%, #d3403a 50%, #dd6864);
+  background-image: -o-linear-gradient(#f7dedd, #e79592 10%, #d64c46 50%, #d3403a 50%, #dd6864);
+  background-image: linear-gradient(#f7dedd, #e79592 10%, #d64c46 50%, #d3403a 50%, #dd6864);
+  border-color: #b72e28;
+  text-shadow: #ad0600 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.588) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.588) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.588) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.588) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+*.button, *.button:visited, #note_submit, #note_submit:visited {
+  color: white;
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+*.button:hover, *.button:focus, #note_submit:hover, #note_submit:focus {
+  background-color: #ff261e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5d2d0), color-stop(10%, #e48985), color-stop(50%, #d3403a), color-stop(50%, #d0342e), color-stop(100%, #da5c57));
+  background-image: -webkit-linear-gradient(#f5d2d0, #e48985 10%, #d3403a 50%, #d0342e 50%, #da5c57);
+  background-image: -moz-linear-gradient(#f5d2d0, #e48985 10%, #d3403a 50%, #d0342e 50%, #da5c57);
+  background-image: -o-linear-gradient(#f5d2d0, #e48985 10%, #d3403a 50%, #d0342e 50%, #da5c57);
+  background-image: linear-gradient(#f5d2d0, #e48985 10%, #d3403a 50%, #d0342e 50%, #da5c57);
+  border-color: #ab2b26;
+  text-shadow: #9d0600 0px 1px 1px;
+}
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+*.button:hover, *.button:hover:visited, *.button:focus, *.button:focus:visited, #note_submit:hover, #note_submit:hover:visited, #note_submit:focus, #note_submit:focus:visited {
+  color: white;
+}
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+*.button:active, #note_submit:active {
+  background-color: #ff170e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d3403a), color-stop(30%, #d54842), color-stop(50%, #d23832), color-stop(50%, #c8322c), color-stop(100%, #db605b));
+  background-image: -webkit-linear-gradient(#d3403a, #d54842 30%, #d23832 50%, #c8322c 50%, #db605b);
+  background-image: -moz-linear-gradient(#d3403a, #d54842 30%, #d23832 50%, #c8322c 50%, #db605b);
+  background-image: -o-linear-gradient(#d3403a, #d54842 30%, #d23832 50%, #c8322c 50%, #db605b);
+  background-image: linear-gradient(#d3403a, #d54842 30%, #d23832 50%, #c8322c 50%, #db605b);
+  border-color: #9e2723;
+  text-shadow: #8e0500 0px -1px -1px;
+  -moz-box-shadow: #b72e28 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #b72e28 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #b72e28 0 0.08em 0.2em 1px inset;
+  box-shadow: #b72e28 0 0.08em 0.2em 1px inset;
+}
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+*.button:active, *.button:active:visited, #note_submit:active, #note_submit:active:visited {
+  color: white;
+}
+
+/* line 51, ../../app/stylesheets/application_v2.scss */
+*.button {
+  margin: 1em;
+}
+
+/* line 57, ../../app/stylesheets/application_v2.scss */
+section .new_note fieldset, .ui-dialog fieldset {
+  margin: 0 0 10px 0;
+}
+/* line 60, ../../app/stylesheets/application_v2.scss */
+section .new_note fieldset:last-child, .ui-dialog fieldset:last-child {
+  margin: 0;
+}
+/* line 65, ../../app/stylesheets/application_v2.scss */
+section .new_note label, .ui-dialog label {
+  display: block;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #d95853;
+  text-shadow: 0 1px 1px #fff;
+}
+/* line 73, ../../app/stylesheets/application_v2.scss */
+section .new_note textarea, .ui-dialog textarea {
+  padding: 5px 8px;
+  font-size: 1.2em;
+  color: #d95853;
+  border: none;
+  /* background-color: rgba(246, 241, 211, 0.1); */
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(12%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #999999 0%, #ffffff 12%);
+  background-image: -moz-linear-gradient(top, #999999 0%, #ffffff 12%);
+  background-image: -o-linear-gradient(top, #999999 0%, #ffffff 12%);
+  background-image: linear-gradient(top, #999999 0%, #ffffff 12%);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 84, ../../app/stylesheets/application_v2.scss */
+section .new_note {
+  margin-left: 12px;
+}
+/* line 87, ../../app/stylesheets/application_v2.scss */
+section .new_note #note_submit {
+  margin-bottom: 10px;
+}
+
+/* line 92, ../../app/stylesheets/application_v2.scss */
+#content {
+  background-color: #fff;
+  min-height: 500px;
+}
+
+/* line 97, ../../app/stylesheets/application_v2.scss */
+.note {
+  position: relative;
+  float: left;
+  width: 180px;
+  height: 180px;
+  list-style: none;
+  color: #333;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  -o-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  -moz-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  -moz-transition-property: transform;
+  -webkit-transition-property: transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+/* line 113, ../../app/stylesheets/application_v2.scss */
+.note:nth-child(even) {
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+}
+/* line 119, ../../app/stylesheets/application_v2.scss */
+.note:nth-child(3n) {
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
+}
+/* line 125, ../../app/stylesheets/application_v2.scss */
+.note:nth-child(5n) {
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  position: relative;
+  top: 10px;
+}
+/* line 131, ../../app/stylesheets/application_v2.scss */
+.note:hover, .note:focus {
+  -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  -moz-transform: scale(1.25, 1.25);
+  -webkit-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+  position: relative;
+  z-index: 5;
+}
+/* line 138, ../../app/stylesheets/application_v2.scss */
+.note p {
+  font-family: "Reenie Beanie", arial, sans-serif;
+  font-size: 200%;
+  line-height: 1.0;
+  padding: 10px;
+  margin: 0;
+  height: 140px;
+  overflow: hidden;
+}
+
+/* line 149, ../../app/stylesheets/application_v2.scss */
+.yellow {
+  background-color: #ebde52;
+}
+
+/* line 153, ../../app/stylesheets/application_v2.scss */
+.green {
+  background-color: #b7d84b;
+}
+
+/* line 157, ../../app/stylesheets/application_v2.scss */
+.pink {
+  background-color: #f36283;
+}
+
+/* line 161, ../../app/stylesheets/application_v2.scss */
+.note span {
+  display: block;
+  bottom: 5px;
+  color: #666;
+}
+
+/* line 168, ../../app/stylesheets/application_v2.scss */
+.left {
+  float: left;
+}
+
+/* line 172, ../../app/stylesheets/application_v2.scss */
+.right {
+  float: right;
+}
+
+/* line 177, ../../app/stylesheets/application_v2.scss */
+section .new_note h1 {
+  color: #b7d84b;
+}
+
+/* line 182, ../../app/stylesheets/application_v2.scss */
+#stacks li header {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #d95853;
+  padding: 0 0 0 12px;
+  text-shadow: 0px 1px 1px #fff;
+}
+/* line 191, ../../app/stylesheets/application_v2.scss */
+#stacks li header a {
+  color: #f6f1d3;
+  text-decoration: none;
+}
+/* line 195, ../../app/stylesheets/application_v2.scss */
+#stacks li header a:hover {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #fff7ca;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #ffffff), color-stop(50%, #f3edc6), color-stop(50%, #f1e9ba), color-stop(100%, #f9f6e4));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 10%, #f3edc6 50%, #f1e9ba 50%, #f9f6e4);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 10%, #f3edc6 50%, #f1e9ba 50%, #f9f6e4);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 10%, #f3edc6 50%, #f1e9ba 50%, #f9f6e4);
+  background-image: linear-gradient(#ffffff, #ffffff 10%, #f3edc6 50%, #f1e9ba 50%, #f9f6e4);
+  border-color: #e9dd93;
+  text-shadow: white 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.896) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.896) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.896) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.896) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+#stacks li header a:hover, #stacks li header a:hover:visited {
+  color: #222222;
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+#stacks li header a:hover:hover, #stacks li header a:hover:focus {
+  background-color: #fff5bb;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(10%, #ffffff), color-stop(50%, #f1e9ba), color-stop(50%, #eee5ad), color-stop(100%, #f7f2d7));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 10%, #f1e9ba 50%, #eee5ad 50%, #f7f2d7);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 10%, #f1e9ba 50%, #eee5ad 50%, #f7f2d7);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 10%, #f1e9ba 50%, #eee5ad 50%, #f7f2d7);
+  background-image: linear-gradient(#ffffff, #ffffff 10%, #f1e9ba 50%, #eee5ad 50%, #f7f2d7);
+  border-color: #e6d987;
+  text-shadow: white 0px 1px 1px;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+#stacks li header a:hover:hover, #stacks li header a:hover:hover:visited, #stacks li header a:hover:focus, #stacks li header a:hover:focus:visited {
+  color: #222222;
+}
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+#stacks li header a:hover:active {
+  background-color: #fff3ab;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1e9ba), color-stop(30%, #f3ecc2), color-stop(50%, #efe6b1), color-stop(50%, #ece2a4), color-stop(100%, #f8f4db));
+  background-image: -webkit-linear-gradient(#f1e9ba, #f3ecc2 30%, #efe6b1 50%, #ece2a4 50%, #f8f4db);
+  background-image: -moz-linear-gradient(#f1e9ba, #f3ecc2 30%, #efe6b1 50%, #ece2a4 50%, #f8f4db);
+  background-image: -o-linear-gradient(#f1e9ba, #f3ecc2 30%, #efe6b1 50%, #ece2a4 50%, #f8f4db);
+  background-image: linear-gradient(#f1e9ba, #f3ecc2 30%, #efe6b1 50%, #ece2a4 50%, #f8f4db);
+  border-color: #e4d57a;
+  text-shadow: #fffef8 0px -1px -1px;
+  -moz-box-shadow: #e9dd93 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #e9dd93 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #e9dd93 0 0.08em 0.2em 1px inset;
+  box-shadow: #e9dd93 0 0.08em 0.2em 1px inset;
+}
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
+#stacks li header a:hover:active, #stacks li header a:hover:active:visited {
+  color: #222222;
+}
+/* line 199, ../../app/stylesheets/application_v2.scss */
+#stacks li header a.button {
+  margin: 0;
+}
+/* line 204, ../../app/stylesheets/application_v2.scss */
+#stacks li header h2 {
+  margin: 0;
+}

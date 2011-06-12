@@ -6,18 +6,18 @@ require 'fancy-buttons'
 project_type = :rails
 
 # Heroku deployment --> start
-project_path = Compass::AppIntegration::Rails.root
-environment  = Compass::AppIntegration::Rails.env
+#project_path = Compass::AppIntegration::Rails.root
+#environment  = Compass::AppIntegration::Rails.env
 
-http_path = "/"
-css_dir   = 'tmp/stylesheets'
-sass_dir  = 'app/stylesheets'
+#http_path = "/"
+#css_dir   = 'tmp/stylesheets'
+#sass_dir  = 'app/stylesheets'
 # Heroku deployment --> end
 
 # Set this to the root of your project when deployed:
-#http_path = "http://sticky-stack.heroku.com/"
-#css_dir = "public/stylesheets/compiled"
-#sass_dir = "app/stylesheets"
+http_path = "/"
+css_dir = "public/stylesheets/compiled"
+sass_dir = "app/stylesheets"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

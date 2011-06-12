@@ -1,0 +1,26 @@
+/* line 1, ../../../app/stylesheets/clear_grid.scss */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+/* line 13, ../../../app/stylesheets/clear_grid.scss */
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* line 22, ../../../app/stylesheets/clear_grid.scss */
+.clearfix:after {
+  clear: both;
+}
