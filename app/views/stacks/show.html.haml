@@ -4,7 +4,7 @@
   %ol.grid_12.alpha.omega
     %li{:id => @stack.id, :class => 'grid_12 alpha omega'}
       %header
-        %span
+        %span.grid_8
           %h2
             =@stack.name
         %span.grid_3
@@ -16,3 +16,5 @@
 = link_to 'Edit', edit_stack_path(@stack)
 \|
 = link_to 'Back', stacks_path
+\|
+= link_to 'Destroy', @stack, :confirm => 'Are you sure?', :method => :delete

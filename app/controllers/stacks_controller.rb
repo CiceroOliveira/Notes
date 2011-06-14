@@ -1,61 +1,34 @@
 class StacksController < ApplicationController
   before_filter :authenticate_user!
   respond_to :html
+  respond_to :js, :only => [:new, :create]
   
   def show
     @stack = Stack.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @stack }
-    end
+    respond_with @stack
   end
   
   def index
     @stacks = current_user.stacks
-    
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @notes }
-    end
+    respond_with @stacks
   end
   
-  # GET /stacks/new
-  # GET /stacks/new.xml
   def new
     @stack = Stack.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @stack }
-      format.js
-    end
+    respond_with @stack
   end
   
-  # POST /stacks
-  # POST /stacks.xml
   def create
     @stack = Stack.new(params[:stack])
     @stack.user_id = current_user.id
-    
-    respond_to do |format|
-      if @stack.save
-        format.html { redirect_to(root_url, :notice => 'Note was successfully created.') }
-        format.xml  { render :xml => @stack, :status => :created, :location => @stack }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
-      end
-    end
+    @stack.save
+    respond_with(@stack, :location => stacks_path)
   end
   
   def destroy
     @stack = Stack.find(params[:id])
     @stack.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(stacks_path) }
-      format.xml  { head :ok }
-    end
+    respond_with([@stack, @note], :location => stacks_path)
   end
   
   def edit
@@ -64,15 +37,9 @@ class StacksController < ApplicationController
 
   def update
     @stack = Stack.find(params[:id])
-
-    respond_to do |format|
-      if @stack.update_attributes(params[:stack])
-        format.html { redirect_to(stacks_path) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
-      end
+    @stack.update_attributes(params[:stack])
+    respond_with @stack do |format|
+      format.html { redirect_to(stacks_path) }
     end
   end
   
