@@ -47,3 +47,5 @@ gem "database_cleaner", :group => :test
 gem "fancy-buttons"
 gem "in_place_editing"
 gem "omniauth"
+gem "mongrel", "1.2.0.pre2"
+gem "daemons", "~> 1.0.10"
