@@ -1,0 +1,2 @@
+alert("test")
+#page.replace_html('#stacks ol', render(@stacks))

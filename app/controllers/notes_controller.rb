@@ -27,19 +27,9 @@ class NotesController < ApplicationController
 
   def create
     @note = @stack.notes.create!(params[:note])
-    respond_with([@stack, @note], :location => stacks_path)
-      
-
-    # respond_to do |format|
-    #   if @stack.save
-    #     format.html { redirect_to(stacks_path, :notice => 'Note was successfully created.') }
-    #     format.xml  { render :xml => @stack, :status => :created, :location => @note }
-    #     format.js
-    #   else
-    #     format.html { render :action => "new" }
-    #     format.xml  { render :xml => @stack.errors, :status => :unprocessable_entity }
-    #   end
-    # end
+    respond_with(@note) do |format|
+      format.html { redirect_to(stacks_path) }
+    end
   end
 
   def update
@@ -48,15 +38,6 @@ class NotesController < ApplicationController
     respond_with(@note) do |format|
       format.html { redirect_to(stacks_path) }
     end
-    # respond_to do |format|
-    #   if @note.update_attributes(params[:note])
-    #     format.html { redirect_to(stacks_path) }
-    #     format.xml  { head :ok }
-    #   else
-    #     format.html { render :action => "edit" }
-    #     format.xml  { render :xml => @note.errors, :status => :unprocessable_entity }
-    #   end
-    # end
   end
 
   def destroy

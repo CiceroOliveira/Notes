@@ -1,7 +1,7 @@
 %h2
   =@stack.name
   
-= form_for [@stack,  @note] do |f|
+= form_for [@stack,  @note], :remote => true do |f|
   -if @note.errors.any?
     #error_explanation
       %h2= "#{pluralize(@note.errors.count, "error")} prohibited this note from being saved:"
